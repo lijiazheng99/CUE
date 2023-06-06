@@ -1,12 +1,10 @@
 # CUE: An Uncertainty Interpretation Framework for Text Classifiers Built on Pre-Trained Language Models
+Jiazheng Li, Zhaoyue Sun, Bin Liang, Lin Gui and Yulan He
 
 ![Current Version](https://img.shields.io/badge/version-v1.0-blue)
 ![GitHub contributors](https://img.shields.io/github/contributors/lijiazheng99/CUE)
 ![GitHub stars](https://img.shields.io/github/stars/lijiazheng99/CUE?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/lijiazheng99/CUE?style=social)
-
-
-Authors: Jiazheng Li, Zhaoyue Sun, Bin Liang, Lin Gui and Yulan He
 
 ## Abstract
 
@@ -54,23 +52,23 @@ CACHEFOLDER = "/path/to/the/folder/transfomers_cache/"
 The ```DATAFOLDER``` is the path to save all the trianed models and the ```CACHEFOLDER``` is the path used to store transformers package's cached models.
 
 ## An example to use CUE
-### Finetune a language model
-#### Original Finetune
+### Finetune a model
+#### Finetune with original model structure
 ```bash
 python train.py -d $dataset_name -b $batch_size -e $num_of_epochs -m $base_model -o True -p $output_path -r $rounds_to_train -t $tokenizer_name
 ```
-Note: $output_path must include ```cue``` as part of the name.
-Example
+Example:
 ```bash
 python train.py -d cola -b 8 -e 30 -m bert-base-uncased -o True -p bert-base-uncased-cola-b8-e30 -r 5 -t bert-base-uncased
 ```
 This will finetune five different models with cola dataset with bert-base-uncased as base models. Training will carry out with the batch size of 8 for 30 epochs. Different random seed will be applied each round and model will saved in the folder ```bert-base-uncased-cola-b8-e30-$time-$round```.
-#### Train CUE framework
+#### Plug-in the CUE framework and train
 ```bash
 python train.py -d $dataset_name -b $batch_size -e $num_of_epochs -m $base_model -o False -p $output_path -r $rounds_to_train -t $tokenizer_name
 ```
-Example:
-Pick one model from the original finetuned models to plug-in the CUE module:
+Note: $output_path must include ```cue``` as part of the name.  
+Example:  
+Pick one model from the original finetuned models to plug-in the CUE module, put the single model folder at ```$base_model```.
 ```bash
 python train.py -d cola -b 8 -e 30 -m bert-base-uncased-cola-b8-e30-0606-1920-0 -o False -p bert-base-uncased-cola-cue-b8-e30 -r 5 -t bert-base-uncased
 ```
