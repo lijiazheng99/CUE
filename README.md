@@ -24,16 +24,16 @@ Project structure:
 	├── .gitignore
 	├── environment.yml     # Conda environment     
 	├── train.py            # Train language models/ CUE framework
-    ├── test.py             # Test fine-tuned models
-    ├── analysis.py         # Generate latent dimension analysis
+        ├── test.py             # Test fine-tuned models
+        ├── analysis.py         # Generate latent dimension analysis
 	└── uncertain
 	    ├── __init__.py
 	    ├── constants.py    
 	    ├── dataloader.py
 	    ├── models
-        │   └── ...
+            │   └── ...
 	    └── evaluation
-            └── ...
+                └── ...
 ```
 
 ### Creating an environment from an environment.yml file
