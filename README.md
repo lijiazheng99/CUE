@@ -18,21 +18,21 @@ Text classifiers built on Pre-trained Language Models (PLMs) have achieved remar
 
 Project structure:
 ```
-	Counterfactuals-for-Sentiment-Analysis
-	├── README.md
-	├── resources
-	├── .gitignore
-	├── environment.yml     # Conda environment     
-	├── train.py            # Train language models/ CUE framework
-        ├── test.py             # Test fine-tuned models
-        ├── analysis.py         # Generate latent dimension analysis
-	└── uncertain
-	    ├── __init__.py
-	    ├── constants.py    
-	    ├── dataloader.py
-	    ├── models
-            │   └── ...
-	    └── evaluation
+CUE
+├── README.md
+├── resources
+├── .gitignore
+├── environment.yml     # Conda environment     
+├── train.py            # Train language models/ CUE framework
+├── test.py             # Test fine-tuned models
+├── analysis.py         # Generate latent dimension analysis
+└── uncertain
+    ├── __init__.py
+    ├── constants.py    
+    ├── dataloader.py
+    ├── models
+    │   └── ...
+    └── evaluation
                 └── ...
 ```
 
