@@ -104,4 +104,15 @@ python analysis.py -d $dataset_name -m token -p $model_path -t $tokenizer_name
 ```
 This will generate a csv file named as ```$model_path.csv``` include analysised tokens needed to manually create Table 2. 
 
-## Reference
+## Cite our work
+```bib
+@inproceedings{
+li2023cue,
+title={{CUE}: An Uncertainty Interpretation Framework for Text Classifiers Built on Pre-Trained Language Models},
+author={Jiazheng Li and ZHAOYUE SUN and Bin Liang and Lin Gui and Yulan He},
+booktitle={The 39th Conference on Uncertainty in Artificial Intelligence},
+year={2023},
+url={https://openreview.net/forum?id=1G_WUgM1pnm}
+}
+```
+
